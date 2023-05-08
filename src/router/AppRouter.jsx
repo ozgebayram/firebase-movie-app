@@ -4,6 +4,7 @@ import Main from "../pages/Main"
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MovieDetail from "../pages/MovieDetail";
+import Navbar from "../components/Navbar";
 
 //  route kullanacaksak ilk yapacagımız route yapısını browser router ile sarmalamak
 
@@ -11,6 +12,7 @@ import MovieDetail from "../pages/MovieDetail";
 const AppRouter = () => {
   return <BrowserRouter>
   {/* roteslar bizim switch yapılarımız */}
+  <Navbar/>
   <Routes>
     <Route path="/" element={<Main/>}/>
     <Route path="/login" element={<Login/>}/>
