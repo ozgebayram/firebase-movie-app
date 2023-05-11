@@ -1,26 +1,10 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Login from "../pages/Login";
-import Main from "../pages/Main";
-import MovieDetail from "../pages/MovieDetail";
-import Register from "../pages/Register";
-import PrivateRouter from "./PrivateRouter";
+import React, { useContext } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { AuthContext } from "../context/AuthContextProvider";
 
-const AppRouter = () => {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/details/:id" element={<PrivateRouter />}>
-          <Route path="" element={<MovieDetail />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+const PrivateRouter = () => {
+  const { currentUser } = useContext(AuthContext);
+  return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
-export default AppRouter;
+export default PrivateRouter;
