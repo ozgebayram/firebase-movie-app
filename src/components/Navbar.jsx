@@ -6,12 +6,12 @@ import { AuthContext } from "../context/AuthContextProvider";
 import Switch from "./Switch";
 
 const Navbar = () => {
-  // const { currentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   //* with custom hook
   // const { currentUser } = useAuthContext();
 
   // const currentUser = { displayName: "felix franko" };
-  const currentUser = false;
+  // const currentUser = false;
   return (
     <>
       <nav className="w-full flex flex-wrap items-center justify-between py-3 bg-white dark:bg-gray-900 dark:text-white shadow-lg navbar navbar-expand-lg fixed-top">
@@ -42,6 +42,7 @@ const Navbar = () => {
                   alt="user"
                   loading="lazy"
                   referrerPolicy="no-referrer"
+                  
                 />
               </span>
               <ul
