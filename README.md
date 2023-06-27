@@ -60,11 +60,6 @@ Build a Movie App using ReactJS.
 - ReactJS
 
 
-
-
-
-![Project 005 Snapshot](firebase-create-app.gif)
-
 - Step 3 : Use `https://firebase.google.com/docs/auth/web/start` and create `Authentication` operations.
   - Add the Firebase Authentication JS codes in your `firebase.js` file and initialize Firebase Authentication:
 
