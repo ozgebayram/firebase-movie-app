@@ -44,11 +44,6 @@ SOLUTION
 ```
 
 
-
-## Objective
-
-Build a Movie App using ReactJS.
-
 ### At the end of the project, following topics are to be covered;
 
 - HTML
@@ -173,8 +168,3 @@ sendPasswordResetEmail(auth, email)
     // ..
   });
 ```
-
-
-
-
-
