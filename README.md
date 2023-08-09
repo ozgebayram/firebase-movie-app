@@ -2,11 +2,6 @@
 
 # Project : Movie App
 
-## Description
-
-Project aims to create a Movie App.
-
-
 ## Project Skeleton
 
 ```
